@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="./js/jquery.js"></script>
+<script src="./js/underscore.js"></script>
+<script src="./js/backbone.js"></script>
+<script src="./js/mvc1.js"></script><!-- 引入js文件 -->
+<script type="text/template" id="user-item-template"><!-- html模板 -->
+    <span>(<%= id %>)</span><a href="#"><%= username %></a>
+</script>
+<link rel="stylesheet" type="text/css" href="./css/default.css" />
+<title>MVC 1</title>
+</head>
+<body>
+	<div id="main">
+		<div id="left">
+			<h3></h3>
+			<ul id="user-list"></ul>
+		</div>
+		<div id="right"></div>
+	</div>
+</body>
+</html>

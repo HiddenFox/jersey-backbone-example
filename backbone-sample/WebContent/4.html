@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="./js/jquery.js"></script>
+<script src="./js/underscore.js"></script>
+<script src="./js/backbone.js"></script>
+<script src="./js/mvc4.js"></script>
+<script type="text/template" id="user-item-template">
+     (<%= id %>)</span><a href="#"><%= username %></a>
+</script>
+<script type="text/template" id="user-info-template">
+	<h3>User Information</h3>
+	<button id="edit">Edit</button>
+    <ul id="user-info">
+		<li>ID:<span><%= id %></span></li>
+		<li>Username:<span><%= username %></span><input type="text" name="username" value="<%= username %>" /></li>
+		<li>Password:<span><%= password %></span><input type="password" name="password" value="<%= password %>" /></li>
+		<li>Email:<span><%= email %></span><input type="text" name="email" value="<%= email %>" /></li>
+		<li>Phone:<span><%= phone %></span><input type="text" name="phone" value="<%= phone %>" /></li>
+		<button id="edit-submit">Submit</button>
+	</ul>
+</script>
+<!-- 增加User的表单 -->
+<script type="text/template" id="user-form-template">
+	<h3>Add User</h3>
+    <ul id="user-form" class="editing">
+		<li>Username:<input type="text" name="username" /></li>
+		<li>Password:<input type="password" name="password" /></li>
+		<li>Email:<input type="text" name="email" /></li>
+		<li>Phone:<input type="text" name="phone" /></li>
+		<button id="add-submit">Submit</button>
+	</ul>
+</script>
+<link rel="stylesheet" type="text/css" href="./css/default.css" />
+<title>MVC 4</title>
+</head>
+<body>
+	<div id="main">
+		<div id="left">
+			<h3></h3>
+			<!-- 增加一个按钮，点击后显示增加User的表单 -->
+			<p><button id="add">Add</button></p>
+			<ul id="user-list"></ul>
+		</div>
+		<div id="right"></div>
+	</div>
+</body>
+</html>
